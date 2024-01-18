@@ -4,57 +4,66 @@ import { Button, Box, Avatar, Grid, Switch } from '@mui/material';
 import { Typography } from '@mui/material';
 import { Divider } from '@mui/material';
 import Profile from "../src/images/profile.jpg";
-
+import "./body.css"
 import { Link } from 'react-router-dom';
+import { Navbar } from './components';
 
 
 
-const HcircleStyle = {
-    borderRadius: "0 0 50px 50px ",
-    width: 120,
-    height: 50,
-    backgroundColor: "#6F2CF5",
-    position: "relative", // Position the circle absolutely
-    top: "1%", // Center vertically
-    zIndex: "-1"
 
-}
+
+
 export default function body() {
 
     return (
 
         <>
 
-            <div >
 
-                <Box sx={{ marginLeft: "25%", marginRight: "25%" }} style={{
-                    display: "flex",
-                    flexDirection: "column",
+            <div style={{
+
+                // backgroundColor: " #0093E9",
+                // backgroundImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+
+                backgroundImage: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% )",
+                height: "100%",
+                width: "100%",
+                paddingBottom: "6rem"
+                // backgroundColor: "green",
 
 
-                }}>
+            }} >
 
-                    <Box style={{ display: "flex", justifyContent: "space-between", padding: "2%", marginTop: "8%", paddingBottom: "8%", }}>
 
-                        <div style={{ display: "flex", gap: "5px" }}>
-                        
-                            <Box style={{
-                                display: "flex",
-                                width: "25px",
-                                height: "25px",
-                           
-                                backgroundColor: "#FF5700",
-                                borderRadius: "50%"
-                            }} >
-                            </Box>
-                            <Typography variant='h6' sx={{ fontWeight: 'bold' }}>Sahil Pradhan</Typography>
-                        </div>
 
-                        <Typography variant='h6'>Home</Typography>
+                <Navbar></Navbar>
 
+                <div className='flex_center ' style={{ margin: "0 0 6rem", width: "100%", color: "whitesmoke" }}>
+                    <Typography variant="h3" style={{ textAlign: "center" }}>Full Stack Web Developer </Typography>
+                </div>
+
+                <Box
+
+
+                    sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        margin: "0 25%  0",
+                        '@media (max-width:960px)': {
+                            margin: "1rem"
+                        }
+
+
+                    }}
+
+
+                >
+
+                    <Box
+                        className="flex_center">
                     </Box>
                     <div>
-                        <Card sx={{ padding: "5%", backgroundColor: "#F3F4F6" }}>
+                        <Card sx={{ padding: "5%", backgroundColor: "whitesmoke" ,color:"black"}}>
 
 
                             <Box sx={{ display: "flex" }}>
@@ -72,7 +81,7 @@ export default function body() {
                             <Divider />
                             <Grid container spacing={2} sx={{ marginTop: "2%" }}>
                                 <Grid item xs={12} lg={9} order={{ xs: 2, lg: 1 }}>
-                                    <Typography  >    Hey, I'm Sahil Pradhan. I'm a full stack developer  based in India. I work mainly with javascript, React, express.
+                                    <Typography  >    Hey, I'm Sahil Pradhan. I'm a full stack developer  based in India. I work mainly with React,Nextjs, express.
 
                                         <span style={{ display: 'block', marginTop: "2%" }}>You can also find me on  <Link to="https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/">Linkedln</Link> and  <Link to="https://github.com/s2ahil">GitHub</Link>, and I’m happy to chat via email: <Link to="sahilpradhan411@gmail.com" underline="always">sahilpradhan411@gmail.com.</Link> </span>
                                     </Typography>
@@ -90,12 +99,14 @@ export default function body() {
                             display: "flex",
                             justifyContent: "center"
                         }}>
-                            <Box style={HcircleStyle} >
-                            </Box>
+                            {/* <Box style={HcircleStyle} >
+                                </Box> */}
                         </div>
 
                     </div>
                 </Box>
+
+
             </div>
 
 
