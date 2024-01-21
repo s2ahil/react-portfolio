@@ -1,8 +1,13 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
-const NavbarItems = ["Home", "🚧Projects", "🚧Resume", "🚧Extras"];
+
+const NavbarItems = [
+
+
+   { page:"Home",route:"/"},{page: "Projects",route:"/projects"},{ page:"🚧Resume",route:""},{ page:"🚧Extras",route:""}];
 
 const Navbar = () => {
     const theme = useTheme();
@@ -24,23 +29,24 @@ const Navbar = () => {
                 }}
             >
                 {NavbarItems.map((item, index) => (
-                    <Typography key={index} sx={{
+                    <Link to={item.route}> <Typography key={index} sx={{
                         fontWeight: 'bold',
                         fontSize: "1.5rem",
                         '&:hover': {
-                                textDecoration: 'underline', // Add the desired hover effect
-                                cursor: 'pointer',
-                                color: "#00c04b", // Change color on hover
-                            },
-                        color:"whitesmoke",
+                            textDecoration: 'underline', // Add the desired hover effect
+                            cursor: 'pointer',
+                            color: "#00c04b", // Change color on hover
+                        },
+                        color: "whitesmoke",
                         '@media (max-width: 600px)': {
                             gap: "1rem", // Set your alternative background color here
                             fontSize: "1rem"
                         },
 
                     }}>
-                        {item}
+                        {item.page}
                     </Typography>
+                    </Link>
                 ))}
             </Box>
         </div>
