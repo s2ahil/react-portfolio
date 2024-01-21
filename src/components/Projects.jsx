@@ -39,7 +39,7 @@ const Projects = () => {
           <div style={{ display: "flex",justifyContent:"center",alignItems:"center", flexWrap: 'wrap', gap: "2rem", padding: "2rem" }}>
             {CardContent.map((project, index) => (
               <div key={index} >
-                <ImageCard Image={project.Image} Name={project.Name} LiveLink={project.LiveLink} Desc={project.Desc}></ImageCard>
+                <ImageCard Image={project.Image} Name={project.Name} LiveLink={project.LiveLink} Desc={project.Desc} Repo={project.Repo}></ImageCard>
               </div>
             ))}
           </div>
