@@ -153,16 +153,18 @@ export default function body() {
 
 
 
-                <div style={{ width: "100%", color: "whitesmoke", display: "flex", flexDirection: "column", alignItems: "center" ,paddingTop:"2rem"}}>
+                <div style={{ width: "100%",color: "whitesmoke", display: "flex", flexDirection: "column", alignItems: "center" ,paddingTop:"2rem"}}>
                     <div>
                         <Typography variant="h3" >Tech Stack </Typography>
                     </div>
 
                     <div style={{
                         display: "flex",
-                        gap: "8rem",
-                        height: "20rem",
-                        padding: "5rem"
+                        gap: "5rem",
+                        height: "30rem",
+                        padding: "5rem",
+                        flexWrap:"wrap",
+                       justifyContent:"center"
 
                     }}>
                         {
