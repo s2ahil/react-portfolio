@@ -12,7 +12,7 @@ export default function ({ Image, Name, Desc, LiveLink, Repo }) {
   return (
     <Card sx={{
       maxWidth: 345,
-      minHeight:380,
+      minHeight: 380,
       '&:hover': {
         backgroundColor: '#1976D2', // Change this to your desired color
         color: 'white', // Change this to your desired text color
@@ -22,11 +22,11 @@ export default function ({ Image, Name, Desc, LiveLink, Repo }) {
 
     >
       <CardMedia
-      width={300}
-      height={200}
+        width={300}
+        height={200}
         component="img"
         alt={Name}
-       
+
         image={Image}
       />
       <CardContent>
@@ -40,7 +40,9 @@ export default function ({ Image, Name, Desc, LiveLink, Repo }) {
 
       <CardActions>
         <div style={{ width: "100%" }}>
-          <Button size="small" href={LiveLink} style={{ color: "black" }}>LiveLink</Button>
+          <Button size="small" href={LiveLink} style={{
+            color: "lightgreen", fontWeight: "bold"
+          }}>LiveLink</Button>
           <Button size="small" href={Repo} style={{ color: "black" }}>Repo Link</Button>
 
         </div>

@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 const NavbarItems = [
 
 
-   { page:"Home",route:"/"},{page: "Projects",route:"/projects"},{ page:"🚧Resume",route:""},{ page:"🚧Extras",route:""}];
+    { page: "Home", route: "/" }, 
+    { page: "Projects", route: "/projects" }, { page: "Resume", route: "/resume" }, { page: "🚧Extras", route: "" }];
 
 const Navbar = () => {
     const theme = useTheme();
