@@ -13,6 +13,7 @@ export default function ({ Image, Name, Desc, LiveLink, Repo }) {
     <Card sx={{
       maxWidth: 345,
       minHeight: 380,
+      maxHeight:400,
       '&:hover': {
         backgroundColor: '#1976D2', // Change this to your desired color
         color: 'white', // Change this to your desired text color

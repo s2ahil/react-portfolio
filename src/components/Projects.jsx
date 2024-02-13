@@ -28,7 +28,7 @@ const Projects = () => {
     <div
       style={{
         backgroundImage: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% )",
-        height: "100%", // Use 100vh for full viewport height
+        minheight: "100vh", // Use 100vh for full viewport height
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -41,7 +41,14 @@ const Projects = () => {
           <h1>PROJECTS</h1>
         </div>
    
-          <div style={{ display: "flex",justifyContent:"center",alignItems:"center", flexWrap: 'wrap', gap: "2rem", padding: "2rem" }}>
+          <div style={{ display: "grid",
+         gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2rem",
+          padding: "2rem",
+          justifyContent: "center",
+          alignItems:"center"
+          
+           }}>
             {CardContent.map((project, index) => (
               <div key={index} >
                 <ImageCard Image={project.Image} Name={project.Name} LiveLink={project.LiveLink} Desc={project.Desc} Repo={project.Repo}></ImageCard>

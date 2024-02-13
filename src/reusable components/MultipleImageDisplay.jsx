@@ -5,7 +5,6 @@ const MultipleImageDisplay = ({ imgsrc, alt }) => {
 
 
         <img
-
             style={{
 
             }}

@@ -18,7 +18,7 @@ import MultipleImageDisplay from './reusable components/MultipleImageDisplay';
 import Nextjs from "./images/Nextjs.png"
 import ReactImage from "./images/react.jpg"
 import Express from "./images/express.png"
-
+import { useRef } from 'react';
 const actions = [
     { icon: <LinkedInIcon ></LinkedInIcon>, name: 'linkedln', href: "https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/" },
     { icon: <GitHubIcon></GitHubIcon>, name: 'Github', href: "https://github.com/s2ahil" },
@@ -41,7 +41,6 @@ const TechStack = [
 
 
 export default function body() {
-
 
 
 
@@ -155,7 +154,7 @@ export default function body() {
 
                 <div style={{ width: "100%",color: "whitesmoke", display: "flex", flexDirection: "column", alignItems: "center" ,paddingTop:"2rem"}}>
                     <div>
-                        <Typography variant="h3" >Tech Stack </Typography>
+                        <Typography variant="h3" id="tech-stack" >Tech Stack </Typography>
                     </div>
 
                     <div style={{
