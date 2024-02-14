@@ -18,7 +18,7 @@ import MultipleImageDisplay from './reusable components/MultipleImageDisplay';
 import Nextjs from "./images/Nextjs.png"
 import ReactImage from "./images/react.jpg"
 import Express from "./images/express.png"
-import { useRef } from 'react';
+
 const actions = [
     { icon: <LinkedInIcon ></LinkedInIcon>, name: 'linkedln', href: "https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/" },
     { icon: <GitHubIcon></GitHubIcon>, name: 'Github', href: "https://github.com/s2ahil" },

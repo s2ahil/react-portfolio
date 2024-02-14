@@ -33,18 +33,23 @@ const Navbar = () => {
                     },
                 }}
             >
-     <a href="#tech-stack">
+     <a href="#tech-stack"  >
                 <Typography
                     className='hoverEffect'
+                   
                     sx={{
                         fontWeight: 'bold',
-                        fontSize: "1.5rem",
                         color: "whitesmoke",
-
+                        fontSize:"1.5rem",
 
                         '&:hover': {
                             cursor: "pointer",
                         },
+                        '@media (max-width: 600px)': {
+                                gap: "1rem", // Set your alternative background color here
+                                fontSize: "1rem"
+                            },
+
 
 
 
@@ -55,16 +60,13 @@ const Navbar = () => {
 
                 >
 
-               Tech Stack </Typography></a>  
+               Tech Stack  </Typography></a>  
 
                 {NavbarItems.map((item, index) => (
                     <Link to={item.route}
-                        className='hoverEffect'
-
-                        style={{
-
-                        }}>
-                        <Typography key={index} sx={{
+                        className='hoverEffect'>
+                        <Typography key={index} 
+                        sx={{
                             fontWeight: 'bold',
                             fontSize: "1.5rem",
 
